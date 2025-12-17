@@ -5,8 +5,8 @@ import Background from "@/components/Background";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Altair — Antártica, en privado",
-  description: "Charter boutique del schooner Altair. Antártica en calma, máximo 6 huéspedes."
+  title: "Altair ï¿½ Antï¿½rtica, en privado",
+  description: "Charter boutique del schooner Altair. Antï¿½rtica en calma, mï¿½ximo 6 huï¿½spedes."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -21,7 +21,7 @@ export default function AdaptiveImage({ src, alt, fillContainer, overlay, classN
         <div className="absolute inset-4 opacity-[0.14]">
           <DecorativeMark variant="stars" />
         </div>
-        <span className="z-10 text-sm">Imagen en preparación</span>
+        <span className="z-10 text-sm">Imagen en preparaciï¿½n</span>
       </div>
     );
   }
