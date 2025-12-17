@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 247 244 235;
+  --fg: 10 24 40;
+  --muted: 94 116 140;
+  --accent: 56 214 198;
+  --accent2: 255 122 162;
+  --glass: 247 244 235;
+  --border: 162 195 220;
+  color: rgb(var(--fg));
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  color: rgb(var(--fg));
+  background: transparent;
+  min-height: 100vh;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.glass {
+  background: color-mix(in srgb, rgb(var(--glass)) 78%, transparent);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgb(var(--border) / 0.45);
+  box-shadow: var(--shadow, 0 14px 30px rgba(10, 24, 40, 0.08));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 0.6px, transparent 0.6px),
+    radial-gradient(rgba(10, 24, 40, 0.06) 0.6px, transparent 0.6px);
+  background-size: 22px 22px, 18px 18px;
+  mix-blend-mode: soft-light;
+  opacity: 0.16;
+}
+
+.gradient-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(247, 244, 235, 0.82) 0%, rgba(247, 244, 235, 0.38) 30%, rgba(162, 195, 220, 0.18) 70%, rgba(10, 24, 40, 0.12) 100%);
+  pointer-events: none;
+}
+
+.section-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+[data-theme="night"] {
+  --bg: 10 24 40;
+  --fg: 235 240 244;
+  --muted: 164 188 211;
+  --accent: 136 230 220;
+  --accent2: 255 148 188;
+  --glass: 13 32 52;
+  --border: 120 165 200;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 10%, rgba(255, 122, 162, 0.04), transparent 25%),
+    radial-gradient(circle at 90% 20%, rgba(56, 214, 198, 0.05), transparent 20%);
+  pointer-events: none;
+}
