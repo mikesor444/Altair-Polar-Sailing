@@ -8,7 +8,7 @@ export default function Background() {
       <div className="absolute inset-0">
         <Image
           src="/altair/bg-ocean-aurora.png"
-          alt="Fondo oceánico aurora"
+          alt="Fondo oceï¿½nico aurora"
           fill
           priority
           sizes="100vw"
