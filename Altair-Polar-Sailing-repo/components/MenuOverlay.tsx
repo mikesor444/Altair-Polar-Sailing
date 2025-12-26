@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -74,7 +74,7 @@ export default function MenuOverlay({ open, onClose }: Props) {
             </div>
             <div className="flex gap-2 flex-wrap">
               <GlassButton href="#contacto" tone="accent">
-                Pedir cotizaci�n
+                Pedir cotización
               </GlassButton>
               <GlassButton href="#itinerario">
                 Ver itinerario

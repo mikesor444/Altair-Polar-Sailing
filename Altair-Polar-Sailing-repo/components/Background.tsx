@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 
@@ -8,7 +8,7 @@ export default function Background() {
       <div className="absolute inset-0">
         <Image
           src="/altair/bg-ocean-aurora.png"
-          alt="Fondo oce�nico aurora"
+          alt="Fondo oceánico aurora"
           fill
           priority
           sizes="100vw"
