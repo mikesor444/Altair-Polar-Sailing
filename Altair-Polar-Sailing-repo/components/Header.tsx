@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import GlassButton from "./GlassButton";
@@ -49,7 +49,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-serif text-lg">Altair</span>
-              <span className="text-xs text-muted uppercase tracking-[0.18em]">Ant�rtica</span>
+              <span className="text-xs text-muted uppercase tracking-[0.18em]">Antártica</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-2 text-sm">
@@ -68,7 +68,7 @@ export default function Header() {
           </nav>
           <div className="md:hidden">
             <GlassButton onClick={() => setMenuOpen(true)} variant="ghost">
-              Men�
+              Menú
             </GlassButton>
           </div>
         </div>
