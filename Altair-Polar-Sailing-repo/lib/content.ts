@@ -7,15 +7,15 @@
 ];
 
 export const itinerary = [
-  { title: "Ushuaia — ajustes finales", description: "Check de equipo, prueba de kayaks, primera cena a bordo.", image: "/altair/itinerary-1.png" },
-  { title: "Canal Beagle", description: "Navegación nocturna suave, cielos limpios si el viento baja.", image: "/altair/itinerary-2.png" },
-  { title: "Cruce del Drake", description: "Guardias cortas, ritmo de té y pan, mirada al swell.", image: "/altair/itinerary-3.png" },
-  { title: "Primer hielo", description: "Cambio de ritmo, avistamientos y primeros témpanos.", image: "/altair/itinerary-4.png" },
-  { title: "Bahía protegida", description: "Anclaje entre hielo, desembarco con dinghy y caminata breve.", image: "/altair/itinerary-5.png" },
-  { title: "Península — exploración", description: "Elección diaria según hielo: fiordo, colonia o espejo de agua.", image: "/altair/itinerary-6.png" },
-  { title: "Noche estelar", description: "Cielo limpio, constelaciones australes y silencio total.", image: "/altair/itinerary-7.png" },
-  { title: "Regreso Drake", description: "Seguimos ventanas de viento, lectura y música en cubierta.", image: "/altair/itinerary-8.png" },
-  { title: "Cabo de Hornos — Ushuaia", description: "Entrada suave, desarme y brunch final.", image: "/altair/itinerary-9.png" }
+  { title: "Ushuaia — ajustes finales", description: "Check de equipo, prueba de kayaks, primera cena a bordo.", image: "/itinerario/itinerario-01-ushuaia.png" },
+  { title: "Canal Beagle", description: "Navegación nocturna suave, cielos limpios si el viento baja.", image: "/itinerario/itinerario-02-canal-beagle.png" },
+  { title: "Cruce del Drake", description: "Guardias cortas, ritmo de té y pan, mirada al swell.", image: "/itinerario/itinerario-03-paso-drake.png" },
+  { title: "Primer hielo", description: "Cambio de ritmo, avistamientos y primeros témpanos.", image: "/itinerario/itinerario-04-shetland-sur.png" },
+  { title: "Bahía protegida", description: "Anclaje entre hielo, desembarco con dinghy y caminata breve.", image: "/itinerario/itinerario-05-primer-contacto.png" },
+  { title: "Península — exploración", description: "Elección diaria según hielo: fiordo, colonia o espejo de agua.", image: "/itinerario/itinerario-06-navegacion-hielo.png" },
+  { title: "Noche estelar", description: "Cielo limpio, constelaciones australes y silencio total.", image: "/itinerario/itinerario-07-desembarcos.png" },
+  { title: "Regreso Drake", description: "Seguimos ventanas de viento, lectura y música en cubierta.", image: "/itinerario/itinerario-08-fauna.png" },
+  { title: "Cabo de Hornos — Ushuaia", description: "Entrada suave, desarme y brunch final.", image: "/itinerario/itinerario-09-regreso.png" }
 ];
 
 export const moments = [
@@ -59,3 +59,4 @@ export const testimonials = [
   { quote: "El Drake fue humano: guardias cortas, sopa caliente y un equipo atento sin dramatismo.", author: "L. Ferrer — Febrero" },
   { quote: "Llegar a un fiordo sin otra estela a la vista. Altair es una cámara lenta en hielo.", author: "A. Ibáñez — Marzo" }
 ];
+
