@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
+﻿import { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 import { clsx } from "clsx";
 
 type BaseProps = {
@@ -16,7 +16,7 @@ type Props = ButtonProps | LinkProps;
 
 export default function GlassButton({ tone, variant = "solid", className, children, ...rest }: Props) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-swift focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
+    "inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 min-h-[44px] text-sm font-semibold transition-colors duration-swift focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
   const styles = clsx(
     variant === "solid" && "glass border border-border/70",
     variant === "ghost" && "border border-transparent hover:border-border/70 glass",

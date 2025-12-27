@@ -12,8 +12,10 @@ interface Props extends Omit<ImageProps, "src" | "alt"> {
   overlay?: boolean;
 }
 
-export default function AdaptiveImage({ src, alt, fillContainer, overlay, className, ...rest }: Props) {
+export default function AdaptiveImage({ src, alt, fillContainer, overlay, className, sizes, ...rest }: Props) {
   const [failed, setFailed] = useState(false);
+
+  const defaultSizes = "(max-width: 768px) 100vw, 50vw";
 
   if (failed) {
     return (
@@ -31,7 +33,7 @@ export default function AdaptiveImage({ src, alt, fillContainer, overlay, classN
       <Image
         src={src}
         fill
-        sizes="(min-width: 1024px) 50vw, 100vw"
+        sizes={sizes ?? defaultSizes}
         alt={alt}
         className={clsx("object-cover", overlay && "brightness-[0.9]", className)}
         onError={() => setFailed(true)}
@@ -46,6 +48,7 @@ export default function AdaptiveImage({ src, alt, fillContainer, overlay, classN
       width={400}
       height={260}
       alt={alt}
+      sizes={sizes ?? defaultSizes}
       className={clsx("object-cover w-full h-full", overlay && "brightness-[0.9]", className)}
       onError={() => setFailed(true)}
       {...rest}
