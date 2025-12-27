@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -10,8 +10,20 @@
   --accent2: 255 122 162;
   --glass: 247 244 235;
   --border: 162 195 220;
+  --container: 1120px;
+  --pad: clamp(16px, 4vw, 40px);
+  --h1: clamp(28px, 4.5vw, 56px);
+  --h2: clamp(22px, 3.2vw, 36px);
+  --p: clamp(16px, 1.4vw, 18px);
+  --section: clamp(48px, 8vw, 96px);
   color: rgb(var(--fg));
   background: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 * {
@@ -71,6 +83,20 @@ a {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+.container-app {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+.prose {
+  max-width: 68ch;
 }
 
 [data-theme="night"] {

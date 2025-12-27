@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   description: "Charter boutique del schooner Altair. Antártica en calma, máximo 6 huéspedes."
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover"
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
