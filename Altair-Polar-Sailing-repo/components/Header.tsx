@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import GlassButton from "./GlassButton";
 import MenuOverlay from "./MenuOverlay";
@@ -44,8 +45,8 @@ export default function Header() {
       >
         <div className="section-shell flex items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <div className="h-[34px] w-[34px] rounded-full bg-white/60 border border-border/60 backdrop-blur-md flex items-center justify-center text-sm font-semibold text-fg">
-              A
+            <div className="h-[34px] w-[34px] rounded-full bg-white/60 border border-border/60 backdrop-blur-md flex items-center justify-center">
+              <Image src="/altair-icon.png" alt="Altair" width={28} height={28} className="object-contain" />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-serif text-lg">Altair</span>

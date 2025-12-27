@@ -1,5 +1,6 @@
-"use client";
+﻿"use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import GlassButton from "./GlassButton";
@@ -14,30 +15,6 @@ interface PanelProps {
   onClose?: () => void;
   staticMode?: boolean;
   className?: string;
-}
-
-function PenguinIcon() {
-  return (
-    <svg viewBox="0 0 120 140" className="w-full h-full" fill="none">
-      <path
-        d="M60 10c16 0 30 14 30 30v12c8 10 12 22 12 38 0 24-18 40-42 40S18 114 18 90c0-16 4-28 12-38V40c0-16 14-30 30-30Z"
-        fill="#F8F5EC"
-        stroke="#0A1828"
-        strokeWidth="3"
-      />
-      <path
-        d="M44 30c-4 4-6 10-6 16v12c6-6 14-9 22-9s16 3 22 9V46c0-6-2-12-6-16-4 6-10 10-16 10s-12-4-16-10Z"
-        fill="#10263D"
-      />
-      <path d="M52 98c-4 10-12 18-24 22 14 8 36 10 48 0-12-4-20-12-24-22Z" fill="#A2C3DC" />
-      <path d="M60 84c10 0 12 12 12 20 0 10-4 14-12 14s-12-4-12-14c0-8 2-20 12-20Z" fill="#0A1828" />
-      <path d="M48 56a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm32 0a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" fill="#0A1828" />
-      <path d="M56 64c2 2 4 3 6 3s4-1 6-3" stroke="#0A1828" strokeWidth="2" strokeLinecap="round" />
-      <path d="M42 112h36" stroke="#2A4E6F" strokeWidth="4" strokeLinecap="round" opacity="0.8" />
-      <path d="M44 120h32" stroke="#2A4E6F" strokeWidth="4" strokeLinecap="round" opacity="0.8" />
-      <path d="M46 128h28" stroke="#2A4E6F" strokeWidth="4" strokeLinecap="round" opacity="0.8" />
-    </svg>
-  );
 }
 
 function useFocusTrap(active: boolean, panelRef: RefObject<HTMLDivElement>) {
@@ -64,6 +41,12 @@ function useFocusTrap(active: boolean, panelRef: RefObject<HTMLDivElement>) {
     return () => document.removeEventListener("keydown", handler);
   }, [active, panelRef]);
 }
+
+const Avatar = () => (
+  <div className="h-[42px] w-[42px] rounded-full bg-white/70 border border-border/70 overflow-hidden flex items-center justify-center">
+    <Image src="/chatbot-avatar.png" alt="Chatbot avatar" width={42} height={42} className="h-full w-full object-cover" />
+  </div>
+);
 
 export default function ChatbotPanel({ faqs, open = false, onClose, staticMode, className }: PanelProps) {
   const isOpen = staticMode ? true : open;
@@ -145,9 +128,7 @@ export default function ChatbotPanel({ faqs, open = false, onClose, staticMode, 
     >
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
-          <div className="h-[42px] w-[42px] rounded-full bg-white/70 border border-border/70 p-1">
-            <PenguinIcon />
-          </div>
+          <Avatar />
           <div>
             <div className="font-semibold">Pingüino Host</div>
             <div className="text-xs text-muted">Disponible</div>
@@ -222,9 +203,7 @@ export function ChatbotFab({ faqs }: { faqs: FAQ[] }) {
             transition={{ duration: 0.2 }}
             aria-label="Abrir chat con pingüino"
           >
-            <div className="h-[42px] w-[42px] rounded-full bg-white/70 border border-border/70 p-1">
-              <PenguinIcon />
-            </div>
+            <Avatar />
             <div className="text-left">
               <div className="font-semibold">Pingüino</div>
               <div className="text-xs text-muted">{hover ? "¿Te cotizo tu salida?" : "Hola"}</div>
