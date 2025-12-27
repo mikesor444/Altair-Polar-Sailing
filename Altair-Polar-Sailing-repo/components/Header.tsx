@@ -45,8 +45,8 @@ export default function Header() {
       >
         <div className="section-shell flex items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <div className="h-[34px] w-[34px] rounded-full bg-white/60 border border-border/60 backdrop-blur-md flex items-center justify-center">
-              <Image src="/altair-icon.png" alt="Altair" width={28} height={28} className="object-contain" />
+            <div className="h-7 w-7 md:h-8 md:w-8 rounded-full bg-white/70 shadow-[0_6px_18px_rgba(10,24,40,0.08)] overflow-hidden flex items-center justify-center">
+              <Image src="/altair-icon.png" alt="Altair" width={32} height={32} className="h-full w-full object-contain" priority />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-serif text-lg">Altair</span>

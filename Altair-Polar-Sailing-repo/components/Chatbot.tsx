@@ -193,7 +193,7 @@ export function ChatbotFab({ faqs }: { faqs: FAQ[] }) {
       <AnimatePresence>
         {!open && (
           <motion.button
-            className="fixed bottom-6 right-4 md:right-8 z-30 glass rounded-full px-4 py-3 shadow-glass border border-border/80 flex items-center gap-3"
+            className="fixed bottom-6 right-4 md:right-8 z-30 glass rounded-full px-4 py-3 min-h-[44px] shadow-glass border border-border/80 flex items-center gap-3 transition-all duration-200 ease-out hover:-translate-y-[1px] hover:shadow-[0_12px_28px_rgba(10,24,40,0.18)] active:translate-y-[1px] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white/40"
             onClick={() => setOpen(true)}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
@@ -215,3 +215,4 @@ export function ChatbotFab({ faqs }: { faqs: FAQ[] }) {
     </>
   );
 }
+

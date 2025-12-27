@@ -91,10 +91,10 @@ export default function Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ delay: 0.08, duration: prefersReduced ? 0 : 0.32 }}
-                className="grid gap-3"
+                className="grid gap-3 sm:gap-4"
               >
                 {experiencePoints.map((item) => (
-                  <li key={item} className="flex gap-3 items-start text-fg">
+                  <li key={item} className="flex gap-3 items-start text-fg leading-relaxed">
                     <span className="mt-[6px] h-[10px] w-[10px] rounded-full bg-accent/70 shadow-[0_0_0_6px_rgba(56,214,198,0.12)]" />
                     <span className="text-base md:text-lg leading-relaxed">{item}</span>
                   </li>
@@ -146,7 +146,8 @@ export default function Page() {
       </section>
 
       <section id="momentos" data-section-theme="light" className="section">
-        <Container>
+        <Container className="space-y-4 md:space-y-6">
+          <h3 className="font-serif text-[var(--h2)] leading-tight">Momentos a bordo</h3>
           <div className="grid gap-4 lg:grid-cols-3">
             {moments.map((moment, idx) => (
               <motion.article
@@ -193,7 +194,7 @@ export default function Page() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="glass p-4 card">
                   <h3 className="text-lg font-semibold mb-2">Incluye</h3>
-                  <ul className="space-y-2 text-muted">
+                  <ul className="space-y-3 sm:space-y-2 text-muted leading-relaxed">
                     {includes.map((item) => (
                       <li key={item} className="flex gap-2">
                         <span className="mt-[6px] h-[8px] w-[8px] rounded-full bg-accent/70" />
@@ -204,7 +205,7 @@ export default function Page() {
                 </div>
                 <div className="glass p-4 card">
                   <h3 className="text-lg font-semibold mb-2">No incluye</h3>
-                  <ul className="space-y-2 text-muted">
+                  <ul className="space-y-3 sm:space-y-2 text-muted leading-relaxed">
                     {excludes.map((item) => (
                       <li key={item} className="flex gap-2">
                         <span className="mt-[6px] h-[8px] w-[8px] rounded-full bg-accent2/70" />
@@ -340,3 +341,6 @@ export default function Page() {
     </>
   );
 }
+
+
+
